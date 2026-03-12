@@ -48,34 +48,31 @@ let coke=document.getElementById("coke").value
 
 let deliveryType=document.querySelector('input[name="delivery"]:checked').value
 
-let message="New Order %0A%0A"
+let message = "New Order\n\n";
 
-message+="Customer: "+name+"%0A"
-message+="Phone: "+phone+"%0A"
-message+="Order Type: "+deliveryType+"%0A"
+message += "Customer: " + name + "\n";
+message += "Phone: " + phone + "\n";
+message += "Order Type: " + deliveryType + "\n";
 
-if(deliveryType==="Delivery"){
-message+="Address: "+address+"%0A"
+if(deliveryType === "Delivery") {
+    message += "Address: " + address + "\n";
 }
 
-message+="%0AItems:%0A"
+message += "\nItems:\n";
 
-if(burger>0){
-message+=burger+" x Chicken Burger %0A"
+if(burger > 0){
+    message += burger + " x Chicken Burger\n";
 }
-
-if(fries>0){
-message+=fries+" x Fries %0A"
+if(fries > 0){
+    message += fries + " x Fries\n";
 }
-
-if(coke>0){
-message+=coke+" x Coca Cola %0A"
+if(coke > 0){
+    message += coke + " x Coca Cola\n";
 }
 
 let whatsappNumber="447745320498"
 
-let url="https://wa.me/"+whatsappNumber+"?text="+encodeURIComponent(message)
-
-window.open(url,"_blank")
+let url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+window.open(url, "_blank");
 
 }
