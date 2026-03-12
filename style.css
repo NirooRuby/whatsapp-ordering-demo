@@ -1,67 +1,83 @@
 body{
-font-family: 'Inter', sans-serif;
+font-family: Arial;
 background:#f4f6fb;
 margin:0;
 }
 
 .container{
-max-width:900px;
+max-width:700px;
 margin:auto;
-padding:30px;
+padding:25px;
 }
 
 h1{
 text-align:center;
-margin-bottom:30px;
+margin-bottom:20px;
 }
 
 .menu{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+display:flex;
+flex-direction:column;
+gap:12px;
 }
 
 .card{
+display:flex;
+align-items:center;
 background:white;
-border-radius:12px;
-box-shadow:0 4px 12px rgba(0,0,0,0.1);
-padding:15px;
-text-align:center;
+border-radius:10px;
+padding:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
 .card img{
-width:100%;
-height:140px;
+width:70px;
+height:70px;
 object-fit:cover;
-border-radius:10px;
-}
-
-.card input{
-width:60px;
-margin-top:10px;
-padding:5px;
-}
-
-input{
-width:100%;
-padding:12px;
-margin-top:10px;
 border-radius:8px;
+margin-right:12px;
+}
+
+.food-info{
+flex:1;
+}
+
+.food-info h3{
+margin:0;
+font-size:16px;
+}
+
+.food-info p{
+margin:3px 0;
+color:#555;
+}
+
+.food-info input{
+width:60px;
+padding:4px;
+}
+
+input[type=text]{
+width:100%;
+padding:10px;
+margin-top:10px;
+border-radius:6px;
 border:1px solid #ddd;
 }
 
 button{
 width:100%;
 margin-top:20px;
-padding:15px;
+padding:14px;
 background:#25D366;
 border:none;
 color:white;
 font-size:16px;
-border-radius:10px;
+border-radius:8px;
 cursor:pointer;
 }
 
-button:hover{
-background:#1ebe5b;
+button:disabled{
+background:#ccc;
+cursor:not-allowed;
 }
