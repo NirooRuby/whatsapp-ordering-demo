@@ -72,10 +72,10 @@ if(coke>0){
 message+=coke+" x Coca Cola %0A"
 }
 
-let whatsappNumber="+4445320498"
+let whatsappNumber="4445320498"
 
-let url="https://wa.me/"+whatsappNumber+"?text="+message
+let url="https://wa.me/"+whatsappNumber+"?text="+encodeURIComponent(message)
 
-window.open(url)
+window.open(url,"_blank")
 
 }
