@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Restaurant Menu</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>My Restaurant</h1>
+<div class="container">
+
+<h1>🍔 Demo Restaurant Menu</h1>
 
 <div class="menu">
 
-<div class="item">
-<h3>Chicken Burger - £6</h3>
-<input type="number" id="burger" value="0">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+<h3>Chicken Burger</h3>
+<p>£6</p>
+<input type="number" id="burger" min="0" value="0">
 </div>
 
-<div class="item">
-<h3>Fries - £3</h3>
-<input type="number" id="fries" value="0">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1576107232684-1279f390859f">
+<h3>Fries</h3>
+<p>£3</p>
+<input type="number" id="fries" min="0" value="0">
 </div>
 
-<div class="item">
-<h3>Coke - £2</h3>
-<input type="number" id="coke" value="0">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581636625402-29b2a704ef13">
+<h3>Coca Cola</h3>
+<p>£2</p>
+<input type="number" id="coke" min="0" value="0">
 </div>
 
 </div>
@@ -34,9 +43,25 @@
 
 <input type="text" id="phone" placeholder="Phone Number">
 
-<br><br>
+<h3>Delivery Option</h3>
+
+<label>
+<input type="radio" name="delivery" value="Pickup" checked onclick="toggleAddress()">
+Pickup
+</label>
+
+<label>
+<input type="radio" name="delivery" value="Delivery" onclick="toggleAddress()">
+Deliver to Home
+</label>
+
+<div id="addressBox" style="display:none;">
+<input type="text" id="address" placeholder="Delivery Address">
+</div>
 
 <button onclick="sendOrder()">Order via WhatsApp</button>
+
+</div>
 
 <script src="script.js"></script>
 
