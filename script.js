@@ -72,7 +72,7 @@ if(coke>0){
 message+=coke+" x Coca Cola %0A"
 }
 
-let whatsappNumber="447000000000"
+let whatsappNumber="447745320497"
 
 let url="https://wa.me/"+whatsappNumber+"?text="+message
 
